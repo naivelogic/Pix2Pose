@@ -222,4 +222,3 @@ class pix2pose():
                 tra_pred = tvec[:,0]
                 cv2.Rodrigues(rvec, rot_pred)                
                 return rot_pred,tra_pred,valid_mask,len(inliers)
-

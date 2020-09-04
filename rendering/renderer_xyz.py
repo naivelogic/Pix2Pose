@@ -5,10 +5,12 @@ https://github.com/wadimkehl/ssd-6d.git
 
 import numpy as np
 from vispy import app, gloo
-
+#import pyglet
+from PyQt5.QtCore import *
 import OpenGL.GL as gl
 
-app.use_app('pyglet')   # Set backend
+app.use_app('PyQt5')   # Set backend
+#pyglet.app.run()
 
 _vertex_code_colored = """
 uniform mat4 u_mv;

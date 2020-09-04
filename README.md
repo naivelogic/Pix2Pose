@@ -141,7 +141,7 @@ For a new dataset (not in the BOP), modify [bop_io.py](tools/bop_io.py) properly
 
 #### 1. Convert 3D models to colored coodinate models        
 ```
-python3 tools/2_1_ply_file_to_3d_coord_model <cfg_path> <dataset_name>
+python3 tools/2_1_ply_file_to_3d_coord_model.py <cfg_path> <dataset_name>
 ```
 The file converts 3D models and save them to the target folder with a dimension information in a file, "norm_factor.json".
 
@@ -166,7 +166,7 @@ This program looks for the last weight file in each directory
 
 ##### (1) Generation of images for 2D detection training        
 ```
-python3 tools/1_1_scene_gen_for_detection.py <cfg_path> <dataset_name> <mask=1(true)/0(false)>
+python3 tools/1_1_scene_gen_for_detection_maskrcnn.py <cfg_path> <dataset_name> <mask=1(true)/0(false)>
 ```
 Output files
 - a number of augmented images using crops of objects in training images

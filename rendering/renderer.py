@@ -8,7 +8,7 @@ from vispy import app, gloo
 
 import OpenGL.GL as gl
 
-app.use_app('pyglet')   # Set backend
+#app.use_app('pyglet')   # Set backend
 
 _vertex_code_colored = """
 uniform mat4 u_mv; 

@@ -1,0 +1,5 @@
+nvidia-docker run -it -v /mnt/bop20/val2017/:/mnt/cvdatastore/coco/val2017/ -v /mnt/bop20/bop/:/mnt/bop20/bop/ -v /home/redne/Pix2Pose:/Pix2Pose pix2pose:latest bash
+
+#python3 tools/3_train_pix2pose.py <cfg_path> <dataset_name> <obj_name> [background_img_folder]
+
+python3 tools/3_train_pix2pose.py cfg/bop20.json lmo 01 /mnt/cvdatastore/coco/val2017/

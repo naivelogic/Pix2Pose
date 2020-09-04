@@ -7,6 +7,8 @@ matplotlib==2.2.4
 imgaug==0.2.7
 pypng==0.0.20
 pytz
-
-
-
+plyfile 
+tqdm 
+vispy 
+pyglet 
+PyOpenGL

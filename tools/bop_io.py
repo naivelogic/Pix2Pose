@@ -105,9 +105,9 @@ def get_dataset(cfg,dataset,train=True,incl_param=False,eval=False,eval_model=Fa
     elif(dataset=='lm'):
         bop_dataset_dir = os.path.join(bop_dir,"lm")
         test_dir = bop_dataset_dir+"/test"
-        train_dir = bop_dataset_dir+"/train"
+        train_dir = bop_dataset_dir+"/train_pbr"
         model_dir = bop_dataset_dir+"/models"+postfix_model
-        model_dir  = "/home/kiru/media/hdd_linux/PoseDataset/hinterstoisser/model_eval"
+        #model_dir  = "/home/kiru/media/hdd_linux/PoseDataset/hinterstoisser/model_eval"
         model_scale=0.001
     
     model_info = inout.load_json(os.path.join(model_dir,"models_info.json"))
@@ -151,8 +151,11 @@ def get_dataset(cfg,dataset,train=True,incl_param=False,eval=False,eval_model=Fa
                         im_id = int(img_id)
                         if(dataset=="itodd" and not(train)):
                             rgb_fn = os.path.join(current_dir+"/gray","{:06d}.tif".format(im_id))
+                        elif(dataset=="lm" and not(train)): 
+                            rgb_fn = os.path.join(current_dir+"/rgb","{:06d}.jpg".format(im_id))
                         else:
                             rgb_fn = os.path.join(current_dir+"/rgb","{:06d}.png".format(im_id))
+                            #rgb_fn = os.path.join(current_dir+"/rgb","{:06d}.jpg".format(im_id))
                         depth_fn = os.path.join(current_dir+"/depth","{:06d}.png".format(im_id))
                         if(train):
                             if(dataset=='hb' or dataset=='itodd' or dataset=='ycbv'):
